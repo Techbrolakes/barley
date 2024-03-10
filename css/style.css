@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
   margin: 0;
   padding: 0;
@@ -23,10 +19,8 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.header-envelope {
-  border-bottom: 3px solid #308367;
-  border-top: 2px solid #308367;
-}
+
+
 .span {
   color: #308367;
 }
@@ -35,6 +29,8 @@ header {
   display: flex;
   gap: 3rem;
 }
+
+
 .navbar-a {
   text-decoration: none;
   list-style: none;
@@ -50,15 +46,18 @@ header {
 }
 
 .heading-primary {
-  @apply text-[3rem] mb-[2rem];
   line-height: 1.5;
   letter-spacing: 0.025em;
 }
+
+
 .paragraph {
   font-size: 1.6rem;
   line-height: 2;
   letter-spacing: 0.025em;
 }
+
+
 /* ADD MEDIA QUERIES HERE */
 @media (max-width: 640px) {
 }
