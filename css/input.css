@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+  color: #555;
+}
+
+header {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-envelope {
+  border-bottom: 3px solid #308367;
+  border-top: 2px solid #308367;
+}
+.span {
+  color: #308367;
+}
+
+.navbar-ul {
+  display: flex;
+  gap: 3rem;
+}
+.navbar-a {
+  text-decoration: none;
+  list-style: none;
+  color: #555;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.heading-primary {
+  @apply text-[3rem] mb-[2rem];
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 2;
+  letter-spacing: 0.025em;
+}
+/* ADD MEDIA QUERIES HERE */
+@media (max-width: 640px) {
+}
+@media (max-width: 768px) {
+}
+
+/* END MEDIA QUERIES HERE */
+section {
+  padding: 6.2rem 0 9.6rem 0;
+}
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10rem;
+}
+.vid {
+  display: grid;
+  grid-template-columns: 1fr 20rem;
+}
+
+.services {
+  text-align: center;
+}
