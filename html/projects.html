@@ -6,6 +6,12 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -19,7 +25,7 @@
     </header>
     <nav class="flex justify-center flex-wrap container bg-color-[] mb-[3rem]">
       <ul class="flex gap-5 text-[1rem] lg:text-[1.7rem] lg:gap[3rem] mb-[3rem]">
-        <a href="./home.html"><li>Home</li></a>
+        <a href="../index.html"><li>Home</li></a>
         <a href="./aboutus.html"><li>About</li></a>
         <a href="./team.html"><li>Team</li></a>
         <a href="./services.html"><li>Services</li></a>
@@ -30,9 +36,13 @@
     </nav>
     <main class="container mt-[2rem]">
       <div class="grid grid-cols-3 lg:grid-cols-6">
-        <div class="lg:col-span-1">image</div>
-        <div class="lg:col-span-1">image</div>
-        <div class="lg:col-span-4 bg-[#308367] text-white p-6 text-center text-[1.7rem] font-semibold">Projects</div>
+        <div class="lg:col-span-1"><img src="/barleyfield assets/projects-1.jpg" alt="project-img" /></div>
+        <div class="lg:col-span-1"><img src="/barleyfield assets/projects-2.jpg" alt="project-img" /></div>
+        <div
+          class="lg:col-span-4 flex justify-center items-center bg-[#308367] text-white p-6 text-center text-[1.7rem] font-semibold"
+        >
+          Projects
+        </div>
       </div>
 
       <!-- DIVIDING INTO SIDEBAR -->
@@ -54,13 +64,15 @@
             Click on the desired country name to view some of our projects.
           </p>
           <!-- DIV FOR NIGERIA AND GHANA IMAGES -->
-          <div class="flex justify-center">
+          <div class="flex justify-center gap-3 mt-[1.5rem]">
             <div>
               <!-- image -->
-              <a href="/">Nigeria</a>
+              <img src="/barleyfield assets/Flag_of_Nigeria.svg.png" alt="naija" width="70%" />
+              <a href="/" class="inline-block text-center">Nigeria</a>
             </div>
             <div>
               <!-- image -->
+              <img src="/barleyfield assets/Flag_of_Ghana.svg.png" alt="ghana" width="90%" />
               <a href="/">Ghana</a>
             </div>
           </div>
