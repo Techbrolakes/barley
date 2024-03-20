@@ -17,25 +17,28 @@
 
   <body>
     <!-- NAVBAR -->
-    <header class="flex max-w-[120rem] mx-auto justify-between items-center py-[2rem] mb-[1.5rem]">
-      <div class="flex gap-2 items-center">
-        <img src="/barleyfield assets/barley-logo.png" alt="barleyfield logo" width="30px" />
-        <h1 class="text-2xl lg:text-4xl font-bold">arley<span class="text-[#308367]">Field </span>Limited.</h1>
-      </div>
-      <p class="text-[1.5rem] font-semibold">...Turn Key Solutions</p>
-    </header>
-    <nav class="flex justify-center flex-wrap container bg-color-[] mb-[3rem]">
-      <ul class="flex gap-5 text-[1rem] lg:text-[1.7rem] lg:gap[3rem] mb-[3rem]">
-        <a href="../index.html"><li>Home</li></a>
-        <a href="./aboutus.html"><li>About</li></a>
-        <a href="./team.html"><li>Team</li></a>
-        <a href="./services.html"><li>Services</li></a>
-        <a href="./projects.html"><li>Projects</li></a>
-        <a href="./careers.html"><li>Careers</li></a>
-        <a href="./contact.html"><li>Contact</li></a>
-      </ul>
-    </nav>
-    <main class="container mt-[2rem]">
+    <div class="bg-white top-0 fixed w-full shadow-md opacity-[0.8]">
+      <header class="flex max-w-[120rem] mx-auto justify-between items-center">
+        <div class="flex gap-2 items-center">
+          <img src="/barleyfield assets/barley-logo.png" alt="barleyfield logo" width="50px" />
+          <!-- <h1 class="text-2xl lg:text-4xl font-bold">arley<span class="text-[#308367]">Field </span>Limited.</h1> -->
+        </div>
+        <!-- <p class="text-[1.5rem] font-semibold">...Turn Key Solutions</p> -->
+        <nav class="flex">
+          <ul class="hidden text-[1.8rem] lg:flex lg:text-[1.8rem] gap-[4rem]">
+            <a href="/index.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">Home</li></a>
+            <a href="./aboutus.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">About</li></a>
+            <a href="./team.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">Team</li></a>
+            <a href="./services.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">Services</li></a>
+            <a href="./projects.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">Projects</li></a>
+            <a href="./careers.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">Careers</li></a>
+            <a href="./contact.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">Contact</li></a>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <!--  -->
+    <main class="container mt-[16rem]">
       <div class="grid grid-cols-3 lg:grid-cols-6">
         <div class="lg:col-span-1"><img src="/barleyfield assets/team-1.jpg" alt="team img 1" width="100%" /></div>
         <div class="lg:col-span-1"><img src="/barleyfield assets/team-2.jpg" alt="team img 2" /></div>
@@ -48,7 +51,7 @@
 
       <!-- DIVIDING INTO SIDEBAR -->
 
-      <div class="grid lg:grid-cols-6 mt-[4rem] lg:gap-[5rem]">
+      <div class="grid lg:grid-row-1 mt-[4rem] lg:gap-[5rem]">
         <div class="lg:col-span-4 bg-gray-100 p-[3rem]">
           <h1 class="text-[2rem] text-center mb-[2rem] leading-[1.5] tracking-[0.025em] font-bold lg:text-[3rem]">
             Our <span class="text-[#308367]">Mission</span> Statement
@@ -140,11 +143,11 @@
         <!-- SIDEBAR -->
         <div class="lg:col-span-2 p-[2]">
           <h1
-            class="text-[2rem] text-center mb-[2rem] leading-[1.5] tracking-[0.025em] font-bold lg:text-[2.5rem] text-[#308367] lg:text-left"
+            class="text-[2rem] text-center mb-[2rem] leading-[1.5] tracking-[0.025em] font-bold lg:text-[2.5rem] text-[#308367]"
           >
             QUICK CONTACT
           </h1>
-          <div class="flex flex-col gap-[3rem]">
+          <div class="grid grid-cols-1 lg:grid-cols-7 gap-[5rem]">
             <div>
               <h3 class="text-[1.6rem] leading-9 tracking-[0.025em] text-[#308367] font-bold">BarleyField Nigeria Limited</h3>
               <p class="text-[1.6rem] leading-9 tracking-[0.025em]">RC 447226</p>
@@ -178,30 +181,29 @@
             <!--  -->
             <div>
               <h3 class="text-[1.6rem] leading-9 tracking-[0.025em] text-[#308367] font-bold">NIGERIA</h3>
-              <p class="text-[1.6rem] leading-9 tracking-[0.025em]">
-                +234-1-7731351<br />
-                +2348035550215 <br />+2348031143545 <br />
-                +2347064000999 <br />
-                +2348038879591 <br />
-                +2348181100441 <br />
-                [Email] <br />
-                barleyfield2003@yahoo.com <br />
-                barleyfieldng@barleyfield.net
-              </p>
+              <div class="flex flex-col gap-3 text-[1.6rem] leading-9 tracking-[0.025em]">
+                <a href="tel: +234-1-7731351 ">+234-1-7731351</a>
+                <a href="tel: +2348035550215 ">+2348035550215</a>
+                <a href="tel: +2348031143545 ">+2348031143545</a>
+                <a href="tel: +2347064000999 ">+2347064000999</a>
+                <a href="tel: +2348038879591  ">+2348038879591 </a>
+                <a href="tel: +2348181100441  ">+2348181100441 </a>
+
+                <a href="mailto: barleyfield2003@yahoo.com">barleyfield2003@yahoo.com</a>
+                <a href="mailto:barleyfieldng@barleyfield.net">barleyfieldng@barleyfield.net</a>
+              </div>
             </div>
             <!--  -->
             <div>
               <h3 class="text-[1.6rem] leading-9 tracking-[0.025em] text-[#308367] font-bold">GHANA</h3>
-              <p class="text-[1.6rem] leading-9 tracking-[0.025em]">
-                02124394 <br />
-                0208862504 <br />
-                0243008490 <br />
-                027747938 <br />
-
-                [Email]<br />
-                barleyfield2003@yahoo.com <br />
-                barleyfieldgh@barleyfield.net
-              </p>
+              <div class="flex flex-wrap flex-col gap-3 text-[1.6rem] leading-9 tracking-[0.025em]">
+                <a href="tel: 02124394 ">02124394</a>
+                <a href="tel: 0208862504 ">0208862504</a>
+                <a href="tel: 0243008490 ">0243008490</a>
+                <a href="tel: 027747938 ">027747938</a>
+                <a href="mailto:  barleyfield2003@yahoo.com"> barleyfield2003@yahoo.com</a>
+                <a href="mailto: barleyfieldgh@barleyfield.net">barleyfieldgh@barleyfield.net</a>
+              </div>
             </div>
 
             <!--  -->
@@ -213,7 +215,7 @@
     </main>
     <!-- FOOTER -->
     <footer class="bg-[#308367] p-4 mt-[3rem]">
-      <div class="container">
+      <div class="max-w-[120rem] mx-auto">
         <p class="text-white text-[1.5rem] text-center font-bold">
           &copy; 2010, BarleyField Nigeria Limited. All Rights Reserved.
         </p>
