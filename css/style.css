@@ -14,7 +14,7 @@ html {
 body {
   font-family: "Inter", serif;
   position: relative;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 header {
@@ -24,7 +24,7 @@ header {
   padding: 2rem;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .span {
@@ -154,19 +154,46 @@ section {
   background-size: cover;
   background-position: center;
 }
+.backdrop-7 {
+  background-image: linear-gradient(to right bottom, rgba(48, 131, 103, 0.2), rgba(48, 131, 103, 0.8)),
+    url("/barleyfield assets/quality-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
 /* NAVBAR */
 .nav-open {
   margin-top: 9rem;
   position: fixed;
   inset: 0 0 0 30%;
+  text-align: center;
+  display: flex;
+  gap: 4rem;
   flex-direction: column;
   padding: min(30vh, 10rem) 2em;
-  background: hsl(0 0% 90% / 0.9);
+  background: hsl(0 0% 90% / 1);
   transition: all 0.3s ease-in;
   transform: translateX(0%);
-
-  /* -webkit-backdrop-filter: blur(10px); */
+  visibility: visible;
+  display: block;
+  backdrop-filter: blur(10px);
+}
+.nav-open li {
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 67em) {
+  .hide-navbar {
+    display: none;
+    transform: translateX(40%);
+    transition: all 0.3s ease-in;
+  }
+}
+@media (max-width: 55em) {
+  .hide-navbar {
+    display: none;
+    transform: translateX(40%);
+    transition: all 0.3s ease-in;
+  }
 }
 .navbar__toggle .bar {
   width: 25px;
@@ -185,4 +212,36 @@ section {
 }
 #mobile-menu.is-active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+/* SWIPER STYLES */
+
+.swiper {
+  z-index: -1;
+
+  width: 600px;
+  height: 600px;
+}
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  /* --swiper-navigation-size: 85px; */
+  --swiper-navigation-color: #308367;
+}
+.swiper-pagination-bullet {
+  /* --swiper-pagination-bullet-width: 50px;
+  --swiper-pagination-bullet-height: 50px; */
+  --swiper-pagination-color: #308367;
 }

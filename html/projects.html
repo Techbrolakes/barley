@@ -25,8 +25,8 @@
           <!-- <h1 class="text-2xl lg:text-4xl font-bold">arley<span class="text-[#308367]">Field </span>Limited.</h1> -->
         </div>
         <!-- <p class="text-[1.5rem] font-semibold">...Turn Key Solutions</p> -->
-        <nav class="flex">
-          <ul class="hidden text-[1.8rem] lg:flex lg:text-[1.8rem] gap-[4rem]">
+        <nav class="main-nav">
+          <ul id="mobile-nav" class="hide-navbar text-[1.8rem] lg:flex lg:text-[1.8rem] gap-[4rem]">
             <a href="/index.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">Home</li></a>
             <a href="./aboutus.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">About</li></a>
             <a href="./team.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">Team</li></a>
@@ -36,6 +36,13 @@
             <a href="./contact.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">Contact</li></a>
           </ul>
         </nav>
+        <!-- MOBILE -->
+        <div class="navbar__toggle block lg:hidden" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <!--  -->
       </header>
     </div>
     <!-- LOADER TOSPIN -->
@@ -290,7 +297,7 @@
     <footer class="bg-[#308367] p-4">
       <div class="max-w-[120rem] mx-auto">
         <p class="text-white text-[1.5rem] text-center font-bold">
-          &copy; 2010, BarleyField Nigeria Limited. All Rights Reserved.
+          &copy; <span class="year">2010</span>, BarleyField Nigeria Limited. All Rights Reserved.
         </p>
       </div>
     </footer>
