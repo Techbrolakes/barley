@@ -7,11 +7,14 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 
   color: #555;
 }
 body {
-  font-family: "PT Serif", serif;
+  font-family: "Inter", serif;
+  position: relative;
+  overflow-x: hidden;
 }
 
 header {
@@ -21,6 +24,7 @@ header {
   padding: 2rem;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 
 .span {
@@ -74,4 +78,111 @@ section {
 
 .services {
   text-align: center;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fb;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #308367;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* backdrop */
+.backdrop-1 {
+  background-image: linear-gradient(to right bottom, rgba(48, 131, 103, 0.2), rgba(48, 131, 103, 0.8)),
+    url("/barleyfield assets/about-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.backdrop-2 {
+  background-image: linear-gradient(to right bottom, rgba(48, 131, 103, 0.2), rgba(48, 131, 103, 0.8)),
+    url("/barleyfield assets/team-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.backdrop-3 {
+  background-image: linear-gradient(to right bottom, rgba(48, 131, 103, 0.2), rgba(48, 131, 103, 0.8)),
+    url("/barleyfield assets/services-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.backdrop-4 {
+  background-image: linear-gradient(to right bottom, rgba(48, 131, 103, 0.2), rgba(48, 131, 103, 0.8)),
+    url("/barleyfield assets/projects-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.backdrop-5 {
+  background-image: linear-gradient(to right bottom, rgba(48, 131, 103, 0.2), rgba(48, 131, 103, 0.8)),
+    url("/barleyfield assets/about-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.backdrop-6 {
+  background-image: linear-gradient(to right bottom, rgba(48, 131, 103, 0.2), rgba(48, 131, 103, 0.8)),
+    url("/barleyfield assets/contact-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* NAVBAR */
+.nav-open {
+  margin-top: 9rem;
+  position: fixed;
+  inset: 0 0 0 30%;
+  flex-direction: column;
+  padding: min(30vh, 10rem) 2em;
+  background: hsl(0 0% 90% / 0.9);
+  transition: all 0.3s ease-in;
+  transform: translateX(0%);
+
+  /* -webkit-backdrop-filter: blur(10px); */
+}
+.navbar__toggle .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background: #555;
+  display: block;
+  z-index: 9999;
+}
+#mobile-menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+#mobile-menu.is-active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#mobile-menu.is-active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barleyfield Limited</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/script/script.js" defer></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -17,15 +18,15 @@
   <body>
     <!-- NAVBAR -->
     <div class="bg-white fixed w-full shadow-md mb-[2rem] opacity-[0.8]">
-      <header class="flex max-w-[120rem] mx-auto justify-between items-center">
+      <header class="header flex max-w-[120rem] mx-auto justify-between items-center">
         <div class="flex gap-2 items-center">
           <img src="/barleyfield assets/barley-logo.png" alt="barleyfield logo" width="50px" />
           <!-- <h1 class="text-2xl lg:text-4xl font-bold">arley<span class="text-[#308367]">Field </span>Limited.</h1> -->
         </div>
         <!-- <p class="text-[1.5rem] font-semibold">...Turn Key Solutions</p> -->
-        <nav class="flex">
-          <ul class="hidden text-[1.8rem] lg:flex lg:text-[1.8rem] gap-[4rem]">
-            <a href="/index.html"><li class="hover:text-[#308367] transition-all duration-300 font-semibold">Home</li></a>
+        <nav class="main-nav hidden lg:block">
+          <ul id="mobile-nav" class="text-[1.8rem] lg:flex lg:text-[1.8rem] gap-[4rem]">
+            <a href="/index.html"><li class="text-[#308367] transition-all duration-300 font-semibold">Home</li></a>
             <a href="./html/aboutus.html"
               ><li class="hover:text-[#308367] transition-all duration-300 font-semibold">About</li></a
             >
@@ -44,29 +45,39 @@
             >
           </ul>
         </nav>
+        <!-- MOBILE -->
+        <div class="navbar__toggle block lg:hidden" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <!--  -->
       </header>
     </div>
+    <!--  -->
+    <!-- LOADER TOSPIN -->
+    <div class="loader"></div>
+    <!--  -->
 
     <!-- MAIN -->
     <main>
-      <!-- VIDEO/IMAGE -->
       <section class="pt-[6.2rem] pb-[9.6rem]">
         <div class="container">
-          <div class="grid lg:grid-cols-2">
+          <div class="grid lg:grid-cols-2 gap-[3rem] lg:gap-1">
             <!-- <div class="flex justify-center"><img src="/barleyfield assets/home.png" alt="home-img" width="90%" /></div> -->
-            <div class="flex flex-col justify-center items-center">
-              <h1 class="text-[2rem] text-center mb-[2rem] leading-[1.5] tracking-[0.025em] font-bold lg:text-[3rem]">
+            <div class="flex text-center flex-col items-center justify-center lg:items-start gap-[2.5rem]">
+              <h1 class="text-[2rem] leading-[1.2] tracking-[0.025em] font-bold lg:text-[5.2rem] lg:text-left">
                 Welcome to Barley<span class="text-[#308367]">Field</span> Ltd.
               </h1>
-              <p class="text-[1.6rem] leading-9 tracking-[0.025em]">
-                BarleyField Limited is a Civil/Structural Engineering Contractors registered under the Company and Allied Matters
-                Decree of 1990 with the Corporate Affairs Commission of Nigeria also a Civil Engineering Company registered under
-                the Registrar General Department, Accra, Ghana. We undertake civil engineering works, sub-soil investigation,
-                piling, telecommunication infrastructure services and Electrical Engineering jobs for various
-                organization/clients. The company is managed by an experienced Civil engineer, who oversees a multi-disciplinary
-                team of specialists for its various jobs. In conjunction with an efficient management and service support team, we
-                offer reliable and quality services at optimal costs to our clients.
+              <p class="text-[1.6rem] w-[70%] leading-[1.4] tracking-[0.025em] lg:text-left">
+                We are Civil/Structural Engineering Contractors in Nigeria & Ghana, offering quality services efficiently managed
+                by experienced professionals.
               </p>
+              <a
+                href="#ourservices"
+                class="inline-block text-[1.7rem] py-[1.6rem] px-[3.2rem] rounded-md bg-[#308367] text-white w-[52%] lg:w-[30%]"
+                >Learn More &darr;</a
+              >
             </div>
 
             <div class="flex justify-center"><img src="/barleyfield assets/careers-1.jpg" alt="home-img-2" width="90%" /></div>
@@ -76,7 +87,7 @@
 
       <!-- ANOTHER GRID -->
 
-      <section class="pt-[6.2rem] pb-[9.6rem]">
+      <section id="ourservices" class="pt-[6.2rem] pb-[9.6rem]">
         <div class="container grid gap-[3rem] justify-center lg:grid-rows-1">
           <div>
             <h1 class="text-[2rem] text-center mb-[2rem] leading-9 tracking-[0.025em] font-bold lg:text-[3rem] mt-[1rem]">
